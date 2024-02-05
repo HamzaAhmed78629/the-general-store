@@ -56,7 +56,7 @@ class Program
                 break;
         }
 
-        while (playerCoins > 0)
+        /*while (playerCoins > 0)
         {
             Console.WriteLine("Buy More Items");
             
@@ -71,7 +71,7 @@ class Program
                 Console.WriteLine("Invalid Input. Please try again");
             }
         }
-        Console.WriteLine("Perfect");
+        Console.WriteLine("Perfect");*/
             
     }
 }
