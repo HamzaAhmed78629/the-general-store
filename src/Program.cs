@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Xml.Serialization;
+
+class Program
 {
     static void Main()
     {
@@ -8,6 +10,7 @@
         int helmetPrice = 3000;
         int foodPrice = 500;
         int presentPrice = 1000;
+        int sipsPrice = 700;
 
         Console.WriteLine("------------------------------");
         Console.WriteLine("Welcome to the general store!");
@@ -21,6 +24,7 @@
         Console.WriteLine("B: A protective helmet.");
         Console.WriteLine("C: Some food.");
         Console.WriteLine("D: A present.");
+        Console.WriteLine("E: A Sip.");
 
         Console.WriteLine("");
 
@@ -46,7 +50,29 @@
                 playerCoins = playerCoins - presentPrice;
                 Console.WriteLine($"Thanks for your purchase! You have {playerCoins} coins remaining.");
                 break;
+            case "E":
+                playerCoins = playerCoins - sipsPrice;
+                Console.WriteLine($"Thanks for your purchase! You have {playerCoins} coins remaining.");
+                break;
         }
+
+        while (playerCoins > 0)
+        {
+            Console.WriteLine("Buy More Items");
+            
+            string userInput = Console.ReadLine();
+
+            if (userInput == "PurchaseLetter")
+            {
+                playerCoins -= 100;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input. Please try again");
+            }
+        }
+        Console.WriteLine("Perfect");
+            
     }
 }
 
