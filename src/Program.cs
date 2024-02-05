@@ -29,7 +29,7 @@ class Program
         Console.WriteLine("");
 
         Console.WriteLine("Enter the letter for your purchase: ");
-        string purchaseLetter = Console.ReadLine();
+        string? purchaseLetter = Console.ReadLine();
 
         Console.WriteLine("");
 
@@ -56,11 +56,11 @@ class Program
                 break;
         }
 
-        /*while (playerCoins > 0)
+        while (playerCoins > 0)
         {
             Console.WriteLine("Buy More Items");
             
-            string userInput = Console.ReadLine();
+            string? userInput = Console.ReadLine();
 
             if (userInput == "PurchaseLetter")
             {
@@ -71,7 +71,7 @@ class Program
                 Console.WriteLine("Invalid Input. Please try again");
             }
         }
-        Console.WriteLine("Perfect");*/
+        Console.WriteLine("Perfect");
             
     }
 }
